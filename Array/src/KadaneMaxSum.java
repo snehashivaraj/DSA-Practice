@@ -1,10 +1,10 @@
-	// find max_sum of sub arrays in given array
-
-package com.practice.aboutdsaonarray.practiclas;
+// Implements Kadane's Algorithm to find the maximum sum subarray efficiently.
 
 import java.util.Arrays;
 
 public class KadaneMaxSum{
+
+	// Returns only the maximum sum of any contiguous subarray using Kadane's Algorithm.
 
 	public static int returnMaxSum(int[] arr){
 
@@ -23,6 +23,9 @@ public class KadaneMaxSum{
 
 		return max_sum;
 	}
+
+	// Returns the actual subarray that gives the maximum sum and print the max sum.
+
 	public static int[] returnMaxSumSubArray(int[] arr){
 
 		int max_sum	= arr[0];
@@ -40,6 +43,8 @@ public class KadaneMaxSum{
 			}
 			if(current_sum < 0){
 
+				current_sum = 0;
+
 				search = i+1; // reassigning 
 			}
 		}
@@ -48,7 +53,9 @@ public class KadaneMaxSum{
 	}
 }
 
-class TestKadans{
+// Test the implementation with a sample array.
+
+class MainKadanesClass{
 
 	public static void main(String[] args) {
 
